@@ -21,11 +21,11 @@ After the style tag, set the svg class to graph.
 
 Then you need to set the SVG element's size using Javascript.
 
-[img_3]
+![img_3](https://raw.githubusercontent.com/persephone-d3/d3_tutorial/master/bar-chart-test/img_3.png)
 
 Next, selectAll creates "g" elements assigned to the variable called bar. The .data(data) method binds the data hardcoded above, as var data, to the g elements. The .enter() method returns the new, data-bound g elments, which can then be appended to the origin bar and given the transform-translate attribute, which is then shifted based on the y-axis relative to its barHeight.
 
-[img_4]
+![img_4](https://raw.githubusercontent.com/persephone-d3/d3_tutorial/master/bar-chart-test/img_4.png)
 
 Finally, we simply append those rect and text elements to the bar variable. D3's dx and dy attribute shifts the element along the respective axis. Here, we're moving it .35em.
 
