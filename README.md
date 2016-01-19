@@ -30,6 +30,8 @@ Next, selectAll creates "g" elements assigned to the variable called bar. The .d
 
 Finally, we simply append those rect and text elements to the bar variable. D3's dx and dy attribute shifts the element along the respective axis. Here, we're moving it .35em.
 
+![img_5](https://raw.githubusercontent.com/persephone-d3/d3_tutorial/master/bar-chart-test/img_5.png)
+
 And that's it! You've made a bar graph using SVG.
 
 **TO MAKE A BUBBLE CHART**
