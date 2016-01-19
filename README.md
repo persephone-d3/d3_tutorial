@@ -71,4 +71,5 @@ Next, we're going to use d3.svg.axis().scale() with the ranges we defined before
 
 Alright, last step is making the points of data viewable. Our graph is still not rendered, because it is waiting to be told what the pieces of data from sampleData are going to be displayed as. calling var cicles like this will make sure they're circles (we could instead make them rectangles, or all sorts of other things). We use .enter().insert('circle') to add them in, and then we need to set the attributes for where the circle x and y values are, what the style is, and what the radius is.
 
+For more information, check out http://www.janwillemtulp.com/2011/04/01/tutorial-line-chart-in-d3/ and http://www.sitepoint.com/simple-bubble-charts-using-d3-js/.
 
