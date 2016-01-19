@@ -7,9 +7,9 @@ npm install d3
  ```
  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
  ```
-One of the msot exciting parts of D3 is that its selection operators, such as attr, style, and property, allow you either specify a value that is either a constant or a function, like this
+One of the most exciting parts of D3 is that its selection operators, such as attr, style, and property, allow you either specify a value that is either a constant or a function, like this:
 
-[img-1]
+[img_1]
 
 ## Making a Simple Bar Chart Using SVG
 
@@ -17,13 +17,20 @@ Scalable Vector Graphics (SVG) an XML-based vector image format. Basically, it's
 
 After the style tag, set the svg class to graph.
 
-[img-2]
+[img_2]
 
 Then you need to set the SVG element's size using Javascript.
 
-[img-3]
+[img_3]
 
-Next, selectAll creates a "g" element assigned to 
+Next, selectAll creates "g" elements assigned to the variable called bar. The .data(data) method binds the data hardcoded above, as var data, to the g elements. The .enter() method returns the new, data-bound g elments, which can then be appended to the origin bar and given the transform-translate attribute, which is then shifted based on the y-axis relative to its barHeight.
 
+[img_4]
+
+Finally, we simply append those rect and text elements to the bar variable. D3's dx and dy attribute shifts the element along the respective axis. Here, we're moving it .35em.
+
+And that's it! You've made a bar graph using SVG.
+
+ 
 
 
