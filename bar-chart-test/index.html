@@ -1,18 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Bar Chart Test</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="chart"></div>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="main.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
@@ -27,58 +12,60 @@
   }
 </style>
 <svg class="chart"></svg>
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
 
-  var data = [4, 8, 15, 16, 23, 42];
+var data = [4, 8, 15, 16, 23, 42];
 
-// set svg's element height here so it can be used to compute based on dataset size
-  var width = 420,
+// set svg's element size here so it can be used to compute the height based on dataset size (aka data.length)
+var width = 420,
     barHeight = 20;
 
 // define x to avoid using 10 as a "magic number"
-  var x = d3.scale.linear()
+var x = d3.scale.linear()
     .domain([0, d3.max(data)])
     .range([0, width]);
 
 // size is based on the height of each bar rather than the overall height of the chart
-  var chart = d3.select(".chart")
+var chart = d3.select(".chart")
     .attr("width", width)
     .attr("height", barHeight * data.length);
 
-// bars will each have g element containing rect and text elements
-  var bar = chart.selectAll("g")
+// this is where you put the elements you want to be created and appended
+var bar = chart.selectAll("g")
+  // join the data using d3's .data method
     .data(data)
-  // use data join to create the g element for each data point
+  //create new, data-bound elements with .enter()
+  // bars will each have g element containing 1 rect and 1 text element
   .enter().append("g")
-  // translate the g element vertically, creating a local origin for positioning the bar and its associated label
+    // transform-translate attribute will take an elements position and adjust it based on a specified value(s) in the x,y directions
     .attr("transform", function(d, i) { 
-      return "translate(0," + i * barHeight + ")";
+      return "translate(0," + i * barHeight + ")"; 
     });
 
-  bar.append("rect")
-    .attr("width", x)
-    .attr("height", barHeight - 1);
+// only a single data join is required since there is exactly one rect and text per g, more data joins are needed for variable number of children
 
-  bar.append("text")
-    .attr("x", function(d) { 
-      return x(d) - 3; 
-    })
-    .attr("y", barHeight / 2)
-    .attr("dy", ".35em")
-    .text(function(d) { 
-      return d; 
-    });
+bar.append("rect")
+  // each g's rect has a width of x
+  .attr("width", x)
+  // and a height of barHeight - 1 (has been translated using the transform attribute)
+  .attr("height", barHeight - 1);
 
+bar.append("text") 
+  .attr("x", function(d) { 
+    return x(d) - 3; 
+  })
+  .attr("y", barHeight / 2)
+  // shift along the y-axis on the position of an element or its content
+  .attr("dy", ".35em")
+  .text(function(d) { 
+    return d; 
+  });
 </script>
-
-
-
-
-
-
-
-
+<script src="main.js"></script>
+<body>
+</body>
+</html>
 
 
 
