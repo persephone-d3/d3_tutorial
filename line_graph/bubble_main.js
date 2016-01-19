@@ -26,12 +26,11 @@ function InitChart() {
     .attr("r", 5)
     .style("fill", "red");
 }
-
 var sampleData = [{
   "x": 1,
-  "y": 5
+  "y": 26
 }, {
-  "x": 20,
+  "x": 4,
   "y": 20
 }, {
   "x": 40,
@@ -40,11 +39,11 @@ var sampleData = [{
   "x": 60,
   "y": 40
 }, {
-  "x": 80,
-  "y": 5
+  "x": 67,
+  "y": 50
 }, {
   "x": 100,
-  "y": 60
+  "y": 40
 }];
 
 $(document).ready(function() {
