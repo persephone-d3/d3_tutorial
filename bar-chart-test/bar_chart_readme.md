@@ -7,9 +7,7 @@ npm install d3
  ```
  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
  ```
-One of the most exciting parts of D3 is that its selection operators, such as attr, style, and property, allow you either specify a value that is either a constant or a function, like this:
-
-[img_1]
+One of the most exciting parts of D3 is that its selection operators, such as attr, style, and property, allow you either specify a value that is either a constant or a function.
 
 ## Making a Simple Bar Chart Using SVG
 
