@@ -1,4 +1,5 @@
 # d3_tutorial
+D3 stands for Data Driven Documents. D3 is a Javascript library that allows you to easily incorporate data visualization into your web applications using just HTML, SVG, and CSS.
 
 ## Basic D3 Setup
 You can either 
