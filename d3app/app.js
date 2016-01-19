@@ -2,8 +2,6 @@ var express = require('express');
 var app	= express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var geocoder = require('geocoder');
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
