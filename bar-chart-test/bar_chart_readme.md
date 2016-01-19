@@ -17,7 +17,7 @@ Scalable Vector Graphics (SVG) an XML-based vector image format. Basically, it's
 
 After the style tag, set the svg class to graph.
 
-[img_2]
+![img_2](https://raw.githubusercontent.com/persephone-d3/d3_tutorial/master/bar-chart-test/img_2.png)
 
 Then you need to set the SVG element's size using Javascript.
 
